@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <div
+      class="container d-flex justify-content-center align-items-center min-vh-100"
+    >
+      <div class="d-flex flex-column">
+        <h1>Password Generator</h1>
+        <div class="d-flex flex-column gap-2 mt-2">
+          <label for="passwordLength" class="text-uppercase fw-bold"
+            >Panjang Password</label
+          >
+          <input type="number" class="form-control" id="passwordLength" />
+          <label for="password" class="form-label text-uppercase fw-bold"
+            >Password</label
+          >
+          <div class="input-group">
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              placeholder="Enter your password"
+            />
+            <span class="input-group-text" id="togglePassword">
+              <i class="bi bi-eye-slash" id="icon"></i>
+            </span>
+          </div>
+          <button
+            onclick="getPassword()"
+            class="btn btn-dark btn-lg fw-bold btn-lg mt-2"
+          >
+            Generate Password
+          </button>
+          <a
+            onclick="savePassword()"
+            id="saveButton"
+            class="btn btn-primary btn-lg btn-lg fw-bold btn-lg mt-2"
+          >
+            Save Password
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script src="passGen.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
